@@ -1,0 +1,11 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports: 
+      - ${DB_PORT}:27017
+    environment:
+      MONGO_DATABASE: ${DB_NAME}
+      MONGO_USERNAME: ${DB_USERNAME}
+      MONGO_PASSWORD: ${DB_PASSWORD}
